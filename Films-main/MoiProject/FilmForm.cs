@@ -28,6 +28,18 @@ namespace MoiProject
                 textBox1.Text = "ФИльм про очень тупого Тома Хэнкса и двух зеков. " +
                     "Один убежал, второй - Морган Фриман";
             }
+            if (film == "Назад в Будущее")
+            {
+                pictureBox1.Load("../../Pictures/" + film + ".jpg");
+                textBox1.Text = "ФИльм про очень тупого Тома Хэнкса и двух зеков. " +
+                    "Один убежал, второй - Морган Фриман";
+            }
+            if (film == "Интерстеллар")
+            {
+                pictureBox1.Load("../../Pictures/" + film + ".jpg");
+                textBox1.Text = "ФИльм про очень тупого Тома Хэнкса и двух зеков. " +
+                    "Один убежал, второй - Морган Фриман";
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)

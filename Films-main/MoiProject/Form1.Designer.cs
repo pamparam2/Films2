@@ -211,6 +211,7 @@ namespace MoiProject
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Text = "Сервис рецензий на игры";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
