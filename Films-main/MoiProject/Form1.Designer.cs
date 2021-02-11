@@ -29,38 +29,38 @@ namespace MoiProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ComboBox comboBox1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.categoryCombo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelnach = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelpob = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelback = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.labelint = new System.Windows.Forms.Label();
+            this.genreCombo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // categoryCombo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] {
+            this.categoryCombo.FormattingEnabled = true;
+            this.categoryCombo.Items.AddRange(new object[] {
             "Игры",
-            "Фильмы",
+            "Кино",
             "Сериалы"});
-            comboBox1.Location = new System.Drawing.Point(158, 12);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new System.Drawing.Size(161, 37);
-            comboBox1.TabIndex = 3;
-            comboBox1.Text = "Фильмы";
+            this.categoryCombo.Location = new System.Drawing.Point(158, 12);
+            this.categoryCombo.Name = "categoryCombo";
+            this.categoryCombo.Size = new System.Drawing.Size(161, 37);
+            this.categoryCombo.TabIndex = 3;
+            this.categoryCombo.Text = "Кино";
             // 
             // button1
             // 
@@ -72,7 +72,7 @@ namespace MoiProject
             this.button1.TabIndex = 2;
             this.button1.Text = "Найти";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Search);
             // 
             // label1
             // 
@@ -89,20 +89,18 @@ namespace MoiProject
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(262, 34);
             this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "Введите фильм";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
-            // label2
+            // labelnach
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 29);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Начало";
-            this.label2.UseMnemonic = false;
-            this.label2.Visible = false;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labelnach.AutoSize = true;
+            this.labelnach.Location = new System.Drawing.Point(79, 124);
+            this.labelnach.Name = "labelnach";
+            this.labelnach.Size = new System.Drawing.Size(99, 29);
+            this.labelnach.TabIndex = 7;
+            this.labelnach.Text = "Начало";
+            this.labelnach.UseMnemonic = false;
+            this.labelnach.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -113,29 +111,8 @@ namespace MoiProject
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 440);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 29);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Описание";
-            this.label3.UseMnemonic = false;
-            this.label3.Visible = false;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(309, 440);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 29);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Описание";
+            this.pictureBox1.Tag = "Начало";
+            this.pictureBox1.Click += new System.EventHandler(this.OpenFilm);
             // 
             // pictureBox2
             // 
@@ -146,26 +123,18 @@ namespace MoiProject
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Tag = "Побег из Шоушенка";
+            this.pictureBox2.Click += new System.EventHandler(this.OpenFilm);
             // 
-            // label5
+            // labelpob
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(267, 124);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(242, 29);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Побег из Шоушенка";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(572, 440);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 29);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Описание";
+            this.labelpob.AutoSize = true;
+            this.labelpob.Location = new System.Drawing.Point(267, 124);
+            this.labelpob.Name = "labelpob";
+            this.labelpob.Size = new System.Drawing.Size(242, 29);
+            this.labelpob.TabIndex = 10;
+            this.labelpob.Text = "Побег из Шоушенка";
+            this.labelpob.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox3
             // 
@@ -176,16 +145,56 @@ namespace MoiProject
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.Tag = "Назад в Будущее";
+            this.pictureBox3.Click += new System.EventHandler(this.OpenFilm);
             // 
-            // label7
+            // labelback
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(530, 124);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(242, 29);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Побег из Шоушенка";
+            this.labelback.AutoSize = true;
+            this.labelback.Location = new System.Drawing.Point(557, 124);
+            this.labelback.Name = "labelback";
+            this.labelback.Size = new System.Drawing.Size(207, 29);
+            this.labelback.TabIndex = 13;
+            this.labelback.Text = "Назад в Будущее\r\n";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(798, 156);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(229, 260);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Tag = "Интерстеллар";
+            this.pictureBox4.Click += new System.EventHandler(this.OpenFilm);
+            // 
+            // labelint
+            // 
+            this.labelint.AutoSize = true;
+            this.labelint.Location = new System.Drawing.Point(822, 124);
+            this.labelint.Name = "labelint";
+            this.labelint.Size = new System.Drawing.Size(181, 29);
+            this.labelint.TabIndex = 16;
+            this.labelint.Text = "Интерстеллар\r\n";
+            // 
+            // genreCombo
+            // 
+            this.genreCombo.FormattingEnabled = true;
+            this.genreCombo.Items.AddRange(new object[] {
+            "Комедия",
+            "Научная фантастика",
+            "Драма",
+            "Документальный фильм",
+            "Боевик",
+            "Триллер",
+            "Хоррор",
+            "Детектив"});
+            this.genreCombo.Location = new System.Drawing.Point(158, 67);
+            this.genreCombo.Name = "genreCombo";
+            this.genreCombo.Size = new System.Drawing.Size(161, 37);
+            this.genreCombo.TabIndex = 19;
+            this.genreCombo.SelectedIndexChanged += new System.EventHandler(this.genreCombo_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -193,18 +202,18 @@ namespace MoiProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1092, 553);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.genreCombo);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.labelint);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelback);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelpob);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelnach);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(comboBox1);
+            this.Controls.Add(this.categoryCombo);
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -215,6 +224,7 @@ namespace MoiProject
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,15 +234,16 @@ namespace MoiProject
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelnach;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelpob;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelback;
+        private System.Windows.Forms.ComboBox categoryCombo;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label labelint;
+        private System.Windows.Forms.ComboBox genreCombo;
     }
 }
 

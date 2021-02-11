@@ -13,6 +13,7 @@ namespace MoiProject
     public struct Film
     {
         public PictureBox picture;
+        public Label label;
         public string category;
         public string genre;
         public string name;
@@ -26,48 +27,69 @@ namespace MoiProject
         {
             InitializeComponent();
 
+            films_list[0].label = labelback;
             films_list[0].picture = pictureBox3;
             films_list[0].category = "Кино";
             films_list[0].genre = "Научная фантастика";
             films_list[0].name = "Назад в Будущее";
 
 
+            films_list[1].label = labelnach;
             films_list[1].picture = pictureBox1;
             films_list[1].category = "Кино";
             films_list[1].genre = "Научная фантастика";
             films_list[1].name = "Начало";
 
+            films_list[2].label = labelpob;
             films_list[2].picture = pictureBox2;
             films_list[2].category = "Кино";
             films_list[2].genre = "Драма";
             films_list[2].name = "Побег из Шоушенка";
-        
+
+            films_list[3].label = labelint;
+            films_list[3].picture = pictureBox4;
+            films_list[3].category = "Кино";
+            films_list[3].genre = "Научная фантастика";
+            films_list[3].name = "Интерстеллар";
+
+            for (int i = 0; i < 4; i++)
+                films_list[i].picture.Tag = films_list[i].name;
+
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void OpenFilm(object sender, EventArgs e)
         {
-            FilmForm Nachalo = new FilmForm(label2.Text);
+            PictureBox pb = (PictureBox)sender;
+            FilmForm Nachalo = new FilmForm(pb.Tag.ToString());
             Nachalo.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void Search(object sender, EventArgs e)
         {
-            FilmForm Nachalo = new FilmForm("Побег из Шоушенка");
-            Nachalo.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
             {
-                films_list[i].picture.Visible = false;
-                if (films_list[i].name.Contains(textBox1.Text))
-                    films_list[i].picture.Visible = true;
+                films_list[i].picture.Visible = true;
+                films_list[i].label.Visible = true;
+                if (textBox1.Text != "" &&
+                    !films_list[i].name.Contains(textBox1.Text))
+                {
+                    films_list[i].picture.Visible = false;
+                    films_list[i].label.Visible = false;
+                }
+
+                if (categoryCombo.Text != "" &&
+                   !films_list[i].category.Contains(categoryCombo.Text))
+                {
+                    films_list[i].picture.Visible = false;
+                    films_list[i].label.Visible = false;
+                }
+                if (genreCombo.Text != "" &&
+                   !films_list[i].genre.Contains(genreCombo.Text))
+                {
+                    films_list[i].picture.Visible = false;
+                    films_list[i].label.Visible = false;
+                }
             }
             /*
             if (textBox1.Text.Contains("Начало"))
@@ -138,14 +160,16 @@ namespace MoiProject
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void genreCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                
         }
     }
 }
