@@ -17,6 +17,8 @@ namespace MoiProject
         public string category;
         public string genre;
         public string name;
+        public string Location;
+        public string Size;
     };
 
     public partial class Form1 : Form
@@ -27,33 +29,56 @@ namespace MoiProject
         {
             InitializeComponent();
 
-            films_list[0].label = labelback;
-            films_list[0].picture = pictureBox3;
+            
             films_list[0].category = "Кино";
             films_list[0].genre = "Научная фантастика";
             films_list[0].name = "Назад в Будущее";
 
 
-            films_list[1].label = labelnach;
-            films_list[1].picture = pictureBox1;
+            
             films_list[1].category = "Кино";
             films_list[1].genre = "Научная фантастика";
             films_list[1].name = "Начало";
 
-            films_list[2].label = labelpob;
-            films_list[2].picture = pictureBox2;
+            
             films_list[2].category = "Кино";
             films_list[2].genre = "Драма";
             films_list[2].name = "Побег из Шоушенка";
 
-            films_list[3].label = labelint;
-            films_list[3].picture = pictureBox4;
+
+            films_list[3].category = "Кино";
+            films_list[3].genre = "Научная фантастика";
+            films_list[3].name = "Интерстеллар";
+
             films_list[3].category = "Кино";
             films_list[3].genre = "Научная фантастика";
             films_list[3].name = "Интерстеллар";
 
             for (int i = 0; i < 4; i++)
+            {
+                //Название фильма
+                films_list[i].label = new Label();
+                films_list[i].label.Location = new Point(250 * i, 100);
+                films_list[i].label.Size = new Size(220, 29);
+                films_list[i].label.Text = films_list[i].name;
+                films_list[i].label.TextAlign = ContentAlignment.TopCenter;
+                Controls.Add(films_list[i].label);
+
+                //Картинка
+                films_list[i].picture = new PictureBox();
+                films_list[i].picture.Location = new Point(250 * i, 120);
+                films_list[i].picture.SizeMode = PictureBoxSizeMode.Zoom;
+                films_list[i].picture.Size = new Size(220, 260);
                 films_list[i].picture.Tag = films_list[i].name;
+                films_list[i].picture.Click += new EventHandler(OpenFilm);
+                try
+                {
+                    films_list[i].picture.Load("../../Pictures/" + films_list[i].name + ".jpg");
+                }
+                catch (Exception) { }
+                Controls.Add(films_list[i].picture);
+
+            }
 
         }
 
@@ -91,52 +116,6 @@ namespace MoiProject
                     films_list[i].label.Visible = false;
                 }
             }
-            /*
-            if (textBox1.Text.Contains("Начало"))
-            {
-                pictureBox1.Visible = true;
-                label2.Visible = true;
-                pictureBox1.Load("../../Pictures/nachalo.jpg");
-                label2.Text = films_list[7].name;
-            }
-            else if (textBox1.Text.Contains("Побег"))
-            {
-                pictureBox1.Visible = true;
-                label2.Visible = true;
-                pictureBox1.Load("../../Pictures/poster.jpg");
-                label2.Text = "Побег из Шоушенка";
-            }
-            else if (textBox1.Text.Contains("Властелин Колец:Возвращение Короля "))
-            {
-                pictureBox1.Visible = true;
-                label2.Visible = true;
-                pictureBox1.Load("../../Pictures/vlastelin.jpg");
-            }
-            else if (textBox1.Text.Contains("Назад в Будущее"))
-            {
-                pictureBox1.Visible = true;
-                label2.Visible = true;
-                pictureBox1.Load("../../Pictures/backfuture.jpg");
-            }
-            else if (textBox1.Text.Contains("Форрест Гамп"))
-            {
-                pictureBox1.Visible = true;
-                label2.Visible = true;
-                pictureBox1.Load("../../Pictures/forestgamp.jpg");
-                label2.Text = "Форрест Гамп";
-            }
-            else if (textBox1.Text.Contains("Побег"))
-            {
-                pictureBox1.Visible = true;
-                label2.Visible = true;
-                pictureBox1.Load("../../Pictures/poster.jpg");
-            }
-
-            else
-            { 
-                pictureBox1.Visible = false;
-                label2.Visible = false;
-            }*/
         }
 
         private void label2_Click(object sender, EventArgs e)

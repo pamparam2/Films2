@@ -18,6 +18,7 @@ namespace MoiProject
 
             try
             {
+                label2.Text = film;
                 pictureBox1.Load("../../Pictures/"+ film + ".jpg");
                 textBox1.Text = File.ReadAllText("../../Pictures/" + film + ".txt");
             }
