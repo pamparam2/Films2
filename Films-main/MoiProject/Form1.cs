@@ -17,8 +17,15 @@ namespace MoiProject
         public string category;
         public string genre;
         public string name;
-        public string Location;
-        public string Size;
+
+        public Film(string category1, string genre1,  string name1 )
+        {
+            category = category1;
+            genre = genre1;
+            name = name1;
+            picture = new PictureBox();
+            label = new Label();
+        }
     };
 
     public partial class Form1 : Form
@@ -29,44 +36,33 @@ namespace MoiProject
         {
             InitializeComponent();
 
-            
-            films_list[0].category = "Кино";
-            films_list[0].genre = "Научная фантастика";
-            films_list[0].name = "Назад в Будущее";
+            films_list[0] = new Film("Кино", "Научная фантастика", "Назад в Будущее");
+            films_list[1] = new Film("Кино", "Драма", "Побег из Шоушенка");
+            films_list[2] = new Film("Кино", "Научная фантастика", "Интерстеллар");
+            films_list[3] = new Film("Кино", "Драма", "Форрест Гамп");
+            films_list[4] = new Film("Кино", "Научная фантастика", "Начало");
+            films_list[5] = new Film("Кино", "Комедия", "Один дома");
+            films_list[6] = new Film("Кино", "Драма", "Зелёная миля");
+            films_list[7] = new Film("Кино", "Драма", "Престиж");
+            films_list[8] = new Film("Кино", "Драма, Комедия", "Поймай меня если сможешь");
 
 
-            
-            films_list[1].category = "Кино";
-            films_list[1].genre = "Научная фантастика";
-            films_list[1].name = "Начало";
 
-            
-            films_list[2].category = "Кино";
-            films_list[2].genre = "Драма";
-            films_list[2].name = "Побег из Шоушенка";
-
-
-            films_list[3].category = "Кино";
-            films_list[3].genre = "Научная фантастика";
-            films_list[3].name = "Интерстеллар";
-
-            films_list[3].category = "Кино";
-            films_list[3].genre = "Научная фантастика";
-            films_list[3].name = "Интерстеллар";
-
-            for (int i = 0; i < 4; i++)
+            int x = 10;
+            int y = 100;
+            for (int i = 0; i < 9; i++)
             {
                 //Название фильма
                 films_list[i].label = new Label();
-                films_list[i].label.Location = new Point(250 * i, 100);
-                films_list[i].label.Size = new Size(220, 29);
+                films_list[i].label.Location = new Point(x, y);
+                films_list[i].label.Size = new Size(220, 60);
                 films_list[i].label.Text = films_list[i].name;
                 films_list[i].label.TextAlign = ContentAlignment.TopCenter;
                 Controls.Add(films_list[i].label);
 
                 //Картинка
                 films_list[i].picture = new PictureBox();
-                films_list[i].picture.Location = new Point(250 * i, 120);
+                films_list[i].picture.Location = new Point(x, y+20);
                 films_list[i].picture.SizeMode = PictureBoxSizeMode.Zoom;
                 films_list[i].picture.Size = new Size(220, 260);
                 films_list[i].picture.Tag = films_list[i].name;
@@ -75,9 +71,30 @@ namespace MoiProject
                 {
                     films_list[i].picture.Load("../../Pictures/" + films_list[i].name + ".jpg");
                 }
-                catch (Exception) { }
+                catch (Exception)
+                {
+                    try
+                    {
+                        films_list[i].picture.Load("../../Pictures/" + films_list[i].name + ".jpeg");
+                    }
+                    catch (Exception)
+                    {
+                        try
+                        {
+                            films_list[i].picture.Load("../../Pictures/" + films_list[i].name + ".jfif");
+                        }
+                        catch (Exception) { }
+                    }
+                }
                 Controls.Add(films_list[i].picture);
 
+
+                x = x + 230;
+                if (x + 220 > Width)
+                {
+                    y = y + 300 ;
+                    x = 10;                   
+                }
             }
 
         }
@@ -92,7 +109,9 @@ namespace MoiProject
 
         private void Search(object sender, EventArgs e)
         {
-            for (int i = 0; i < 4; i++)
+            int x = 10;
+            int y = 100;
+            for (int i = 0; i < 9; i++)
             {
                 films_list[i].picture.Visible = true;
                 films_list[i].label.Visible = true;
@@ -114,6 +133,23 @@ namespace MoiProject
                 {
                     films_list[i].picture.Visible = false;
                     films_list[i].label.Visible = false;
+                }
+                
+                if (films_list[i].picture.Visible)
+                {
+
+                    films_list[i].label.Location = new Point(x, y);
+                    films_list[i].picture.Location = new Point(x, y + 20);
+
+                    x = x + 230;
+                    if (x + 220 > Width)
+                    {
+                        y = y + 300;
+                        x = 10;
+                    }
+
+
+
                 }
             }
         }
@@ -149,6 +185,11 @@ namespace MoiProject
         private void genreCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
                 
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
