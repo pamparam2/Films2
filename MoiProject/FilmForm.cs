@@ -20,6 +20,23 @@ namespace MoiProject
             {
                 label2.Text = film;
                 pictureBox1.Load("../../Pictures/"+ film + ".jpg");
+                
+                textBox1.Text = File.ReadAllText("../../Pictures/" + film + ".txt");
+            }
+            catch (Exception) { }
+            try
+            {
+                label2.Text = film;
+                pictureBox1.Load("../../Pictures/" + film + ".jpeg");
+
+                textBox1.Text = File.ReadAllText("../../Pictures/" + film + ".txt");
+            }
+            catch (Exception) { }
+            try
+            {
+                label2.Text = film;
+                pictureBox1.Load("../../Pictures/" + film + ".jfif");
+
                 textBox1.Text = File.ReadAllText("../../Pictures/" + film + ".txt");
             }
             catch (Exception) { }

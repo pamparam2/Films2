@@ -55,14 +55,14 @@ namespace MoiProject
                 //Название фильма
                 films_list[i].label = new Label();
                 films_list[i].label.Location = new Point(x, y);
-                films_list[i].label.Size = new Size(220, 60);
+                films_list[i].label.Size = new Size(220, 40);
                 films_list[i].label.Text = films_list[i].name;
                 films_list[i].label.TextAlign = ContentAlignment.TopCenter;
                 Controls.Add(films_list[i].label);
 
                 //Картинка
                 films_list[i].picture = new PictureBox();
-                films_list[i].picture.Location = new Point(x, y+20);
+                films_list[i].picture.Location = new Point(x, y+40);
                 films_list[i].picture.SizeMode = PictureBoxSizeMode.Zoom;
                 films_list[i].picture.Size = new Size(220, 260);
                 films_list[i].picture.Tag = films_list[i].name;
