@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,18 +16,13 @@ namespace MoiProject
         {
             InitializeComponent();
 
-            if (film == "Побег из Шоушенка")
+            try
             {
-                pictureBox1.Load("../../Pictures/poster.jpg");
-                textBox1.Text = "ФИльм про судьбу двух зеков. " +
-                    "Один убежал, второй - Морган Фриман";
+                label2.Text = film;
+                pictureBox1.Load("../../Pictures/"+ film + ".jpg");
+                textBox1.Text = File.ReadAllText("../../Pictures/" + film + ".txt");
             }
-            if (film == "Форрест Гамп")
-            {
-                pictureBox1.Load("../../Pictures/" + film + ".jpg");
-                textBox1.Text = "ФИльм про очень тупого Тома Хэнкса и двух зеков. " +
-                    "Один убежал, второй - Морган Фриман";
-            }
+            catch (Exception) { }
         }
 
         private void Form2_Load(object sender, EventArgs e)
