@@ -17,12 +17,16 @@ namespace MoiProject
         public string category;
         public string genre;
         public string name;
+        public string imdb;
+        public string kinopoisk;
 
-        public Film(string category1, string genre1,  string name1 )
+        public Film(string category1, string genre1,  string name1, string site1, string site2)
         {
             category = category1;
             genre = genre1;
             name = name1;
+            imdb = site1;
+            kinopoisk = site2;
             picture = new PictureBox();
             label = new Label();
         }
@@ -30,27 +34,27 @@ namespace MoiProject
 
     public partial class Form1 : Form
     {
-        Film[] films_list = new Film[700];
+        public static Film[] films_list = new Film[9];
 
         public Form1()
         {
             InitializeComponent();
 
-            films_list[0] = new Film("Кино", "Научная фантастика", "Назад в Будущее");
-            films_list[1] = new Film("Кино", "Драма", "Побег из Шоушенка");
-            films_list[2] = new Film("Кино", "Научная фантастика", "Интерстеллар");
-            films_list[3] = new Film("Кино", "Драма", "Форрест Гамп");
-            films_list[4] = new Film("Кино", "Научная фантастика", "Начало");
-            films_list[5] = new Film("Кино", "Комедия", "Один дома");
-            films_list[6] = new Film("Кино", "Драма", "Зелёная миля");
-            films_list[7] = new Film("Кино", "Драма", "Престиж");
-            films_list[8] = new Film("Кино", "Драма, Комедия", "Поймай меня если сможешь");
+            films_list[0] = new Film("Кино", "Научная фантастика", "Назад в Будущее","https://imdb.com", "https://kinopoisk.ru");
+            films_list[1] = new Film("Кино", "Драма", "Побег из Шоушенка", "https://imdb.com", "https://kinopoisk.ru");
+            films_list[2] = new Film("Кино", "Научная фантастика", "Интерстеллар", "https://imdb.com", "https://kinopoisk.ru");
+            films_list[3] = new Film("Кино", "Драма", "Форрест Гамп", "https://imdb.com", "https://kinopoisk.ru");
+            films_list[4] = new Film("Кино", "Научная фантастика", "Начало", "https://imdb.com", "https://kinopoisk.ru");
+            films_list[5] = new Film("Кино", "Комедия", "Один дома", "https://imdb.com", "https://kinopoisk.ru");
+            films_list[6] = new Film("Кино", "Драма", "Зелёная миля", "https://imdb.com", "https://kinopoisk.ru");
+            films_list[7] = new Film("Кино", "Драма", "Престиж", "https://imdb.com", "https://kinopoisk.ru");
+            films_list[8] = new Film("Кино", "Драма, Комедия", "Поймай меня если сможешь", "https://imdb.com", "https://kinopoisk.ru");
 
 
 
             int x = 10;
             int y = 100;
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < films_list.Length; i++)
             {
                 //Название фильма
                 films_list[i].label = new Label();

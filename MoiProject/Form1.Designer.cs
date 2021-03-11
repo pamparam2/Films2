@@ -34,6 +34,7 @@ namespace MoiProject
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.genreCombo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // categoryCombo
@@ -66,9 +67,9 @@ namespace MoiProject
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 29);
+            this.label1.Size = new System.Drawing.Size(142, 29);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Категория";
+            this.label1.Text = "Категория:";
             // 
             // textBox1
             // 
@@ -96,6 +97,15 @@ namespace MoiProject
             this.genreCombo.TabIndex = 19;
             this.genreCombo.SelectedIndexChanged += new System.EventHandler(this.genreCombo_SelectedIndexChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(42, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 29);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Жанр:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -103,6 +113,7 @@ namespace MoiProject
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1092, 553);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.genreCombo);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -125,6 +136,7 @@ namespace MoiProject
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox categoryCombo;
         private System.Windows.Forms.ComboBox genreCombo;
+        private System.Windows.Forms.Label label2;
     }
 }
 

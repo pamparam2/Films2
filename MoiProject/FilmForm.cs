@@ -12,32 +12,27 @@ namespace MoiProject
 {
     public partial class FilmForm : Form
     {
-        public FilmForm(string film)
+        Film film;
+        public FilmForm(string name)
         {
             InitializeComponent();
 
-            try
+            Text = name; 
+            foreach (Film film1 in Form1.films_list)
             {
-                label2.Text = film;
-                pictureBox1.Load("../../Pictures/"+ film + ".jpg");
-                
-                textBox1.Text = File.ReadAllText("../../Pictures/" + film + ".txt");
+                if (film1.name == name)
+                {
+                    film = film1;
+                    label2.Text = film1.name;
+                    pictureBox1.Image = film1.picture.Image;
+                    textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
+                }
             }
-            catch (Exception) { }
+
+
             try
             {
-                label2.Text = film;
-                pictureBox1.Load("../../Pictures/" + film + ".jpeg");
-
-                textBox1.Text = File.ReadAllText("../../Pictures/" + film + ".txt");
-            }
-            catch (Exception) { }
-            try
-            {
-                label2.Text = film;
-                pictureBox1.Load("../../Pictures/" + film + ".jfif");
-
-                textBox1.Text = File.ReadAllText("../../Pictures/" + film + ".txt");
+                textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
             }
             catch (Exception) { }
         }
@@ -69,7 +64,17 @@ namespace MoiProject
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(film.imdb);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            System.Diagnostics.Process.Start(film.kinopoisk);
         }
     }
 }
