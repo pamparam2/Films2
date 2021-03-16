@@ -35,6 +35,7 @@ namespace MoiProject
     public partial class Form1 : Form
     {
         public static Film[] films_list = new Film[9];
+        public static List<Film> sohraneno_list = new List<Film>();
 
         public Form1()
         {
@@ -193,6 +194,13 @@ namespace MoiProject
 
         private void label2_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form SohranenoForm = new SohranenoForm();
+            SohranenoForm.Show();
 
         }
     }

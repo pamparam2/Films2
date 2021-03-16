@@ -35,6 +35,7 @@ namespace MoiProject
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.genreCombo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // categoryCombo
@@ -106,6 +107,16 @@ namespace MoiProject
             this.label2.TabIndex = 20;
             this.label2.Text = "Жанр:";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(368, 76);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(262, 37);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Сохранённое";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -113,6 +124,7 @@ namespace MoiProject
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1092, 553);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.genreCombo);
             this.Controls.Add(this.textBox1);
@@ -137,6 +149,7 @@ namespace MoiProject
         private System.Windows.Forms.ComboBox categoryCombo;
         private System.Windows.Forms.ComboBox genreCombo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
     }
 }
 
