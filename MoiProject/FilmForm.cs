@@ -26,6 +26,8 @@ namespace MoiProject
                     label2.Text = film1.name;
                     pictureBox1.Image = film1.picture.Image;
                     textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
+                    if (film1.category == "Игры")
+                        linkLabel1.Text = "Сайт игр";
                 }
             }
 
@@ -53,6 +55,11 @@ namespace MoiProject
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Form1.sohraneno_list.Add(film);
+        }
+
+        private void FilmForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

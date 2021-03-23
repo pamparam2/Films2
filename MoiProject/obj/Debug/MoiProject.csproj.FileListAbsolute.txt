@@ -53,3 +53,15 @@ C:\Users\user\Downloads\Films-main\Films-main\MoiProject\obj\Debug\MoiProject.Fi
 C:\Users\user\Downloads\Films-main\Films-main\MoiProject\obj\Debug\MoiProject.Properties.Resources.resources
 C:\Users\user\Downloads\Films-main\Films-main\MoiProject\obj\Debug\MoiProject.csproj.GenerateResource.cache
 C:\Users\user\Downloads\Films-main\Films-main\MoiProject\obj\Debug\MoiProject.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\git\Films-main\MoiProject\bin\Debug\MoiProject.exe.config
+C:\Users\user\Desktop\git\Films-main\MoiProject\bin\Debug\MoiProject.exe
+C:\Users\user\Desktop\git\Films-main\MoiProject\bin\Debug\MoiProject.pdb
+C:\Users\user\Desktop\git\Films-main\MoiProject\obj\Debug\MoiProject.csprojAssemblyReference.cache
+C:\Users\user\Desktop\git\Films-main\MoiProject\obj\Debug\MoiProject.SohranenoForm.resources
+C:\Users\user\Desktop\git\Films-main\MoiProject\obj\Debug\MoiProject.Form1.resources
+C:\Users\user\Desktop\git\Films-main\MoiProject\obj\Debug\MoiProject.FilmForm.resources
+C:\Users\user\Desktop\git\Films-main\MoiProject\obj\Debug\MoiProject.Properties.Resources.resources
+C:\Users\user\Desktop\git\Films-main\MoiProject\obj\Debug\MoiProject.csproj.GenerateResource.cache
+C:\Users\user\Desktop\git\Films-main\MoiProject\obj\Debug\MoiProject.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\git\Films-main\MoiProject\obj\Debug\MoiProject.exe
+C:\Users\user\Desktop\git\Films-main\MoiProject\obj\Debug\MoiProject.pdb

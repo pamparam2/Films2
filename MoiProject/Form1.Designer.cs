@@ -50,6 +50,7 @@ namespace MoiProject
             this.categoryCombo.Size = new System.Drawing.Size(161, 37);
             this.categoryCombo.TabIndex = 3;
             this.categoryCombo.Text = "Кино";
+            this.categoryCombo.SelectedIndexChanged += new System.EventHandler(this.categoryCombo_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -79,6 +80,7 @@ namespace MoiProject
             this.textBox1.Size = new System.Drawing.Size(262, 34);
             this.textBox1.TabIndex = 6;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // genreCombo
             // 
@@ -96,7 +98,7 @@ namespace MoiProject
             this.genreCombo.Name = "genreCombo";
             this.genreCombo.Size = new System.Drawing.Size(161, 37);
             this.genreCombo.TabIndex = 19;
-            this.genreCombo.SelectedIndexChanged += new System.EventHandler(this.genreCombo_SelectedIndexChanged);
+            this.genreCombo.SelectedIndexChanged += new System.EventHandler(this.Search);
             // 
             // label2
             // 
@@ -109,7 +111,7 @@ namespace MoiProject
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(368, 76);
+            this.button2.Location = new System.Drawing.Point(368, 66);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(262, 37);
             this.button2.TabIndex = 21;
