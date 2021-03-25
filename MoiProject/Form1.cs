@@ -53,10 +53,10 @@ namespace MoiProject
             films_list.Add(new Film("Кино", "Драма, Детектив", "Остров проклятых", "https://imdb.com/title/tt1130884/", "https://kinopoisk.ru/film/397667/"));
             films_list.Add(new Film("Кино", "Научная фантастика, Комедия", "Матрица", "https://imdb.com/title/tt0133093/", "https://kinopoisk.ru/film/301/"));
             films_list.Add(new Film("Кино", "Драма, Триллер", "Бойцовский клуб", "https://imdb.com/title/tt0137523/", "https://kinopoisk.ru/film/361/"));
-            films_list.Add(new Film("Сериалы", "Драма, Триллер", "Бойцовский клуб", "https://imdb.com/title/tt0137523/", "https://kinopoisk.ru/film/361/"));
+            films_list.Add(new Film("Игры", "Шутер", "Half-life", "", "https://metacritic.com/game/pc/half-life"));
 
             int x = 10;
-            int y = 100;
+            int y = 10;
             for (int i = 0; i < films_list.Count; i++)
             {
                 //Название фильма
@@ -64,7 +64,7 @@ namespace MoiProject
                 films_list[i].label.Size = new Size(220, 40);
                 films_list[i].label.Text = films_list[i].name;
                 films_list[i].label.TextAlign = ContentAlignment.TopCenter;
-                Controls.Add(films_list[i].label);
+                filmsPanel.Controls.Add(films_list[i].label);
 
                 //Картинка
                 films_list[i].picture.Location = new Point(x, y + 15);
@@ -91,7 +91,7 @@ namespace MoiProject
                         catch (Exception) { }
                     }
                 }
-                Controls.Add(films_list[i].picture);
+                filmsPanel.Controls.Add(films_list[i].picture);
 
 
                 x = x + 230;
@@ -115,7 +115,7 @@ namespace MoiProject
         private void Search(object sender, EventArgs e)
         {
             int x = 10;
-            int y = 100;
+            int y = 10;
             for (int i = 0; i < films_list.Count; i++)
             {
                 films_list[i].picture.Visible = true;
@@ -249,6 +249,19 @@ namespace MoiProject
 
 
             Search(sender, e);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (filterPanel.Height > 50)
+            {
+                filterPanel.Height = 50;            
+            }
+            else
+            {
+                filterPanel.Height = 100;
+            } 
+               
         }
     }
 }

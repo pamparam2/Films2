@@ -16,6 +16,7 @@ namespace MoiProject
         public FilmForm(string name)
         {
             InitializeComponent();
+            
 
             Text = name; 
             foreach (Film film1 in Form1.films_list)
@@ -25,19 +26,23 @@ namespace MoiProject
                     film = film1;
                     label2.Text = film1.name;
                     pictureBox1.Image = film1.picture.Image;
-                    textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
+                    try
+                    {
+                        textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
+                    }
+                    catch (Exception) { }
+
                     if (film1.category == "Игры")
-                        linkLabel1.Text = "Сайт игр";
+                    {
+                        linkLabel1.Text = "Metacritic:";
+                        linkLabel2.Visible = false;
+                    }
                 }
             }
 
 
-            try
-            {
-                textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
-            }
-            catch (Exception) { }
         }
+        
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -60,6 +65,10 @@ namespace MoiProject
         private void FilmForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
         }
     }
 }
