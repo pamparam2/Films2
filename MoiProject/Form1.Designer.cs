@@ -39,6 +39,8 @@ namespace MoiProject
             this.button3 = new System.Windows.Forms.Button();
             this.filmsPanel = new System.Windows.Forms.Panel();
             this.filterPanel = new System.Windows.Forms.Panel();
+            this.RuButton = new System.Windows.Forms.Button();
+            this.EngButton = new System.Windows.Forms.Button();
             this.filterPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +73,7 @@ namespace MoiProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 14);
+            this.label1.Location = new System.Drawing.Point(8, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 29);
             this.label1.TabIndex = 4;
@@ -141,9 +143,12 @@ namespace MoiProject
             this.filmsPanel.Name = "filmsPanel";
             this.filmsPanel.Size = new System.Drawing.Size(1092, 441);
             this.filmsPanel.TabIndex = 23;
+            this.filmsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.filmsPanel_Paint);
             // 
             // filterPanel
             // 
+            this.filterPanel.Controls.Add(this.EngButton);
+            this.filterPanel.Controls.Add(this.RuButton);
             this.filterPanel.Controls.Add(this.label1);
             this.filterPanel.Controls.Add(this.button3);
             this.filterPanel.Controls.Add(this.button1);
@@ -157,6 +162,26 @@ namespace MoiProject
             this.filterPanel.Name = "filterPanel";
             this.filterPanel.Size = new System.Drawing.Size(1092, 112);
             this.filterPanel.TabIndex = 24;
+            // 
+            // RuButton
+            // 
+            this.RuButton.Location = new System.Drawing.Point(818, 65);
+            this.RuButton.Name = "RuButton";
+            this.RuButton.Size = new System.Drawing.Size(56, 43);
+            this.RuButton.TabIndex = 23;
+            this.RuButton.Text = "RU";
+            this.RuButton.UseVisualStyleBackColor = true;
+            this.RuButton.Click += new System.EventHandler(this.RuButton_Click);
+            // 
+            // EngButton
+            // 
+            this.EngButton.Location = new System.Drawing.Point(880, 65);
+            this.EngButton.Name = "EngButton";
+            this.EngButton.Size = new System.Drawing.Size(56, 43);
+            this.EngButton.TabIndex = 24;
+            this.EngButton.Text = "EN";
+            this.EngButton.UseVisualStyleBackColor = true;
+            this.EngButton.Click += new System.EventHandler(this.EngButton_Click);
             // 
             // Form1
             // 
@@ -189,6 +214,8 @@ namespace MoiProject
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel filmsPanel;
         private System.Windows.Forms.Panel filterPanel;
+        private System.Windows.Forms.Button EngButton;
+        private System.Windows.Forms.Button RuButton;
     }
 }
 

@@ -13,10 +13,23 @@ namespace MoiProject
     public partial class FilmForm : Form
     {
         Film film;
+        void translate(Dictionary<string, string> words)
+        {
+
+            label1.Text = words["Описание"];
+            label3.Text = words["Оценки:"];
+        }
         public FilmForm(string name)
         {
             InitializeComponent();
-            
+
+
+            if (Form1.Language==  "Русский")
+                 translate(Form1.RusWords);
+            if (Form1.Language == "Английский")
+                 translate(Form1.EngWords);
+
+
 
             Text = name; 
             foreach (Film film1 in Form1.films_list)

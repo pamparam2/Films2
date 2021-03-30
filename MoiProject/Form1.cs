@@ -36,10 +36,48 @@ namespace MoiProject
     {
         public static List<Film> films_list = new List<Film>();
         public static List<Film> sohraneno_list = new List<Film>();
+        public static Dictionary<string, string> EngWords = new Dictionary<string, string>();
+        public static Dictionary<string, string> RusWords = new Dictionary<string, string>();
+        public static string Language;
 
+        void translate(Dictionary<string, string> words)
+        {
+            label1.Text = words["Категория"] + ":";
+            label2.Text = words["Жанр"];
+            button2.Text = words["Сохранённое"];
+            button1.Text = words["Найти"];
+        }
+
+        private void EngButton_Click(object sender, EventArgs e)
+        {
+            translate(EngWords);
+            Form1.Language = "Английский";
+        }
+
+        private void RuButton_Click(object sender, EventArgs e)
+        {
+            translate(RusWords);
+            Form1.Language = "Русский";
+        }
         public Form1()
         {
             InitializeComponent();
+
+            EngWords.Add("Категория", "Category");
+            EngWords.Add("Жанр", "Genre");
+            EngWords.Add("Найти", "Search");
+            EngWords.Add("Сохранённое", "Basket");
+            EngWords.Add("Описание", "Description");
+            EngWords.Add("Оценки:", "Ratings:");
+
+
+            RusWords.Add("Категория", "Категория");
+            RusWords.Add("Жанр", "Жанр");
+            RusWords.Add("Найти", "Найти");
+            RusWords.Add("Сохранённое", "Сохранённое");
+            RusWords.Add("Описание", "Описание");
+            RusWords.Add("Оценки:", "Оценки:");
+
 
             films_list.Add(new Film("Кино", "Научная фантастика", "Назад в Будущее", "https://imdb.com/title/tt0088763/", "https://kinopoisk.ru/film/476/"));
             films_list.Add(new Film("Кино", "Драма", "Побег из Шоушенка", "https://imdb.com/title/tt0111161/", "https://kinopoisk.ru/film/326/"));
@@ -97,8 +135,8 @@ namespace MoiProject
                 x = x + 230;
                 if (x + 220 > Width)
                 {
-                    y = y + 300 ;
-                    x = 10;                   
+                    y = y + 300;
+                    x = 10;
                 }
             }
 
@@ -111,6 +149,13 @@ namespace MoiProject
             Nachalo.Show();
         }
 
+
+        
+
+
+
+        
+        
 
         private void Search(object sender, EventArgs e)
         {
@@ -263,5 +308,12 @@ namespace MoiProject
             } 
                
         }
+
+        private void filmsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        
+
     }
 }
