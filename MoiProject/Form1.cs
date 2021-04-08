@@ -78,7 +78,7 @@ namespace MoiProject
             RusWords.Add("Описание", "Описание");
             RusWords.Add("Оценки:", "Оценки:");
 
-
+            
             films_list.Add(new Film("Кино", "Научная фантастика", "Назад в Будущее", "https://imdb.com/title/tt0088763/", "https://kinopoisk.ru/film/476/"));
             films_list.Add(new Film("Кино", "Драма", "Побег из Шоушенка", "https://imdb.com/title/tt0111161/", "https://kinopoisk.ru/film/326/"));
             films_list.Add(new Film("Кино", "Научная фантастика", "Интерстеллар", "https://imdb.com/title/tt0816692/", "https://kinopoisk.ru/film/258687/"));
@@ -313,7 +313,16 @@ namespace MoiProject
         {
 
         }
-        
 
+        private void filterPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form AddForm = new AddForm();
+            AddForm.Show();
+        }
     }
 }

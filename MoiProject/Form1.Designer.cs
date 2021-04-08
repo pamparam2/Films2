@@ -39,8 +39,9 @@ namespace MoiProject
             this.button3 = new System.Windows.Forms.Button();
             this.filmsPanel = new System.Windows.Forms.Panel();
             this.filterPanel = new System.Windows.Forms.Panel();
-            this.RuButton = new System.Windows.Forms.Button();
             this.EngButton = new System.Windows.Forms.Button();
+            this.RuButton = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.filterPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,6 +148,7 @@ namespace MoiProject
             // 
             // filterPanel
             // 
+            this.filterPanel.Controls.Add(this.button4);
             this.filterPanel.Controls.Add(this.EngButton);
             this.filterPanel.Controls.Add(this.RuButton);
             this.filterPanel.Controls.Add(this.label1);
@@ -162,6 +164,17 @@ namespace MoiProject
             this.filterPanel.Name = "filterPanel";
             this.filterPanel.Size = new System.Drawing.Size(1092, 112);
             this.filterPanel.TabIndex = 24;
+            this.filterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.filterPanel_Paint);
+            // 
+            // EngButton
+            // 
+            this.EngButton.Location = new System.Drawing.Point(880, 65);
+            this.EngButton.Name = "EngButton";
+            this.EngButton.Size = new System.Drawing.Size(56, 43);
+            this.EngButton.TabIndex = 24;
+            this.EngButton.Text = "EN";
+            this.EngButton.UseVisualStyleBackColor = true;
+            this.EngButton.Click += new System.EventHandler(this.EngButton_Click);
             // 
             // RuButton
             // 
@@ -173,15 +186,15 @@ namespace MoiProject
             this.RuButton.UseVisualStyleBackColor = true;
             this.RuButton.Click += new System.EventHandler(this.RuButton_Click);
             // 
-            // EngButton
+            // button4
             // 
-            this.EngButton.Location = new System.Drawing.Point(880, 65);
-            this.EngButton.Name = "EngButton";
-            this.EngButton.Size = new System.Drawing.Size(56, 43);
-            this.EngButton.TabIndex = 24;
-            this.EngButton.Text = "EN";
-            this.EngButton.UseVisualStyleBackColor = true;
-            this.EngButton.Click += new System.EventHandler(this.EngButton_Click);
+            this.button4.Location = new System.Drawing.Point(674, 66);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(138, 39);
+            this.button4.TabIndex = 25;
+            this.button4.Text = "Добавить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -216,6 +229,7 @@ namespace MoiProject
         private System.Windows.Forms.Panel filterPanel;
         private System.Windows.Forms.Button EngButton;
         private System.Windows.Forms.Button RuButton;
+        private System.Windows.Forms.Button button4;
     }
 }
 
