@@ -1,0 +1,14 @@
+Кино; Научная фантастика; Назад в Будущее; https://imdb.com/title/tt0088763/; https://kinopoisk.ru/film/476/; 2.28; 2.28
+Кино; Драма; Побег из Шоушенка; https://imdb.com/title/tt0111161/; https://kinopoisk.ru/film/326/; 2.28; 2.28
+Кино; Научная фантастика; Интерстеллар; https://imdb.com/title/tt0816692/; https://kinopoisk.ru/film/258687/; 2.28; 2.28
+Кино; Драма; Форрест Гамп; https://imdb.com/title/tt0109830/; https://kinopoisk.ru/film/448/; 2.28; 2.28
+Кино; Научная фантастика; Начало; https://imdb.com/title/tt1375666/; https://kinopoisk.ru/film/447301/; 2.28; 2.28
+Кино; Комедия; Один дома; https://imdb.com/title/tt0099785/; https://kinopoisk.ru/film/8124/; 2.28; 2.28
+Кино; Драма; Зелёная миля; https://imdb.com/title/tt0120689/; https://kinopoisk.ru/film/435/; 2.28; 2.28
+Кино; Драма; Престиж; https://imdb.com/title/tt0120689/; https://kinopoisk.ru/film/195334/; 2.28; 2.28
+Кино; Драма, Комедия; Поймай меня если сможешь; https://imdb.com/title/tt0264464/; https://kinopoisk.ru/324/; 2.28; 2.28
+Кино; Драма, Детектив; Остров проклятых; https://imdb.com/title/tt1130884/; https://kinopoisk.ru/film/397667/; 2.28; 2.28
+Кино; Научная фантастика; Комедия; Матрица; https://imdb.com/title/tt0133093/; https://kinopoisk.ru/film/301/; 2.28; 2.28
+Кино; Драма, Триллер; Бойцовский клуб; https://imdb.com/title/tt0137523/; https://kinopoisk.ru/film/361/; 2.28; 2.28
+Игры; Шутер; Half-life; ; https://metacritic.com/game/pc/half-life; 2.28; 0
+Игры; Гонки; Тачки; ; https://google.com; 6; 0
