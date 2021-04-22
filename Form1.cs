@@ -344,5 +344,22 @@ namespace MoiProject
             Form AddForm = new AddForm();
             AddForm.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SignForm Form1 = new SignForm();
+            Form1.ShowDialog();
+
+            if (SignForm.Login == "Админ") 
+            {
+              SignForm.Password = "qwerty1234";
+          
+            };
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

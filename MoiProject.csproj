@@ -58,6 +58,12 @@
     <Compile Include="AddForm.Designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignForm.Designer.cs">
+      <DependentUpon>SignForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SohranenoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignForm.resx">
+      <DependentUpon>SignForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SohranenoForm.resx">
       <DependentUpon>SohranenoForm.cs</DependentUpon>
