@@ -91,3 +91,17 @@ C:\Users\user\Downloads\Films2-892ef5647595925dcc4e8d4992179f5a46fe301d\Films2-8
 C:\Users\user\Downloads\Films2-892ef5647595925dcc4e8d4992179f5a46fe301d\Films2-892ef5647595925dcc4e8d4992179f5a46fe301d\MoiProject\obj\Debug\MoiProject.Properties.Resources.resources
 C:\Users\user\Downloads\Films2-892ef5647595925dcc4e8d4992179f5a46fe301d\Films2-892ef5647595925dcc4e8d4992179f5a46fe301d\MoiProject\obj\Debug\MoiProject.csproj.GenerateResource.cache
 C:\Users\user\Downloads\Films2-892ef5647595925dcc4e8d4992179f5a46fe301d\Films2-892ef5647595925dcc4e8d4992179f5a46fe301d\MoiProject\obj\Debug\MoiProject.csproj.CoreCompileInputs.cache
+C:\Users\beavi\source\repos\Films2\MoiProject\bin\Debug\MoiProject.exe.config
+C:\Users\beavi\source\repos\Films2\MoiProject\bin\Debug\MoiProject.exe
+C:\Users\beavi\source\repos\Films2\MoiProject\bin\Debug\MoiProject.pdb
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.csprojAssemblyReference.cache
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.AddForm.resources
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.SignForm.resources
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.SohranenoForm.resources
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.Form1.resources
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.FilmForm.resources
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.Properties.Resources.resources
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.csproj.GenerateResource.cache
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.csproj.CoreCompileInputs.cache
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.exe
+C:\Users\beavi\source\repos\Films2\MoiProject\obj\Debug\MoiProject.pdb
