@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace MoiProject
@@ -50,6 +51,36 @@ namespace MoiProject
         private void follow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MailAddress from = new MailAddress("proverka456587@gmail.com", "Ilya");
+            // кому отправляем
+            MailAddress to = new MailAddress("beavisabra@yandex.ru");
+            // создаем объект сообщения
+            MailMessage m = new MailMessage(from, to);
+            // тема письма
+            m.Subject = "";
+
+            // текст письма
+            m.Body = "Привет! Здесь сохранённые тобой фильмы, сериалы и т.д.";
+            File.WriteAllText("Сохранённое.csv", "Название, Оценка1, Оценка2, Ссылка");
+            foreach (Film film in Form1.sohraneno_list)
+            {
+                File.AppendAllText("Сохранённое.csv",
+                    Environment.NewLine +
+                    film.name +  "," + film.ocenkakinopoisk + "," + film.ocenkaimdb + "," +  film.kinopoisk);
+            }
+            m.Attachments.Add(new Attachment("Сохранённое.csv"));
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            // логин и пароль
+            smtp.Credentials = new NetworkCredential(from.Address, "Proverka12345");
+            smtp.EnableSsl = true;
+            smtp.Send(m);
+
+            MessageBox.Show("Отправлено");
         }
     }
 }

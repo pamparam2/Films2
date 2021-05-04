@@ -27,12 +27,29 @@ namespace MoiProject
         {
 
         }
+        string adress = "";
 
         private void button1_Click(object sender, EventArgs e)
         {
-            File.AppendAllText("../../Всё.txt", Environment.NewLine + 
-                textBox6.Text + "; " + textBox5.Text  + "; " + textBox1.Text + "; " + textBox3.Text);
+            File.AppendAllText("../../Всё.txt", Environment.NewLine +  
+                categoryCombo.Text + "; " + textBox5.Text  + "; " + textBox1.Text + "; " + textBox3.Text + "; " + textBox4.Text);
             MessageBox.Show("Успешно сохранено!");
+            if (adress != "")
+                File.Copy(adress, "../../Pictures/" + textBox1.Text + ".jpg");
+        
+    }
+
+        
+
+        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                adress = openFileDialog1.FileName;
+                pictureBox1.Load(adress);
+
+            }
         }
     }
 }

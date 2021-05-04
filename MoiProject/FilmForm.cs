@@ -38,6 +38,8 @@ namespace MoiProject
                 {
                     film = film1;
                     label2.Text = film1.name;
+                    label5.Text = film1.ocenkaimdb;
+                    label4.Text = film1.ocenkakinopoisk;
                     pictureBox1.Image = film1.picture.Image;
                     try
                     {
@@ -49,6 +51,7 @@ namespace MoiProject
                     {
                         linkLabel1.Text = "Metacritic:";
                         linkLabel2.Visible = false;
+                        label5.Visible = false;
                     }
                 }
             }
@@ -82,6 +85,16 @@ namespace MoiProject
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

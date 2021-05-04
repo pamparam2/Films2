@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +20,18 @@ namespace MoiProject
         public string name;
         public string imdb;
         public string kinopoisk;
+        public string ocenkakinopoisk;
+        public string ocenkaimdb;
 
-        public Film(string category1, string genre1,  string name1, string site1, string site2)
+        public Film(string category1, string genre1,  string name1, string site1, string site2, string ocenka1, string ocenka2)
         {
             category = category1;
             genre = genre1;
             name = name1;
             imdb = site1;
             kinopoisk = site2;
+            ocenkakinopoisk = ocenka1;
+            ocenkaimdb = ocenka2;
             picture = new PictureBox();
             label = new Label();
         }
@@ -78,21 +83,36 @@ namespace MoiProject
             RusWords.Add("Описание", "Описание");
             RusWords.Add("Оценки:", "Оценки:");
 
-            
-            films_list.Add(new Film("Кино", "Научная фантастика", "Назад в Будущее", "https://imdb.com/title/tt0088763/", "https://kinopoisk.ru/film/476/"));
-            films_list.Add(new Film("Кино", "Драма", "Побег из Шоушенка", "https://imdb.com/title/tt0111161/", "https://kinopoisk.ru/film/326/"));
-            films_list.Add(new Film("Кино", "Научная фантастика", "Интерстеллар", "https://imdb.com/title/tt0816692/", "https://kinopoisk.ru/film/258687/"));
-            films_list.Add(new Film("Кино", "Драма", "Форрест Гамп", "https://imdb.com/title/tt0109830/", "https://kinopoisk.ru/film/448/"));
-            films_list.Add(new Film("Кино", "Научная фантастика", "Начало", "https://imdb.com/title/tt1375666/", "https://kinopoisk.ru/film/447301/"));
-            films_list.Add(new Film("Кино", "Комедия", "Один дома", "https://imdb.com/title/tt0099785/", "https://kinopoisk.ru/film/8124/"));
-            films_list.Add(new Film("Кино", "Драма", "Зелёная миля", "https://imdb.com/title/tt0120689/", "https://kinopoisk.ru/film/435/"));
-            films_list.Add(new Film("Кино", "Драма", "Престиж", "https://imdb.com/title/tt0120689/", "https://kinopoisk.ru/film/195334/"));
-            films_list.Add(new Film("Кино", "Драма, Комедия", "Поймай меня если сможешь", "https://imdb.com/title/tt0264464/", "https://kinopoisk.ru/324/"));
-            films_list.Add(new Film("Кино", "Драма, Детектив", "Остров проклятых", "https://imdb.com/title/tt1130884/", "https://kinopoisk.ru/film/397667/"));
-            films_list.Add(new Film("Кино", "Научная фантастика, Комедия", "Матрица", "https://imdb.com/title/tt0133093/", "https://kinopoisk.ru/film/301/"));
-            films_list.Add(new Film("Кино", "Драма, Триллер", "Бойцовский клуб", "https://imdb.com/title/tt0137523/", "https://kinopoisk.ru/film/361/"));
-            films_list.Add(new Film("Игры", "Шутер", "Half-life", "", "https://metacritic.com/game/pc/half-life"));
+            string[] lines = File.ReadAllLines("../../Всё.txt");
+            foreach (string line in lines)
+            {
+                string[] parts = line.Split(new string[] { "; " }, StringSplitOptions.None);
+                if (parts.Length > 6)//больше двух элементов в блокноте том...
+                {
+                    films_list.Add(new Film(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
 
+                    if (!categoryCombo.Items.Contains(parts[0]))
+                        categoryCombo.Items.Add(parts[0]);
+                }
+            }
+
+            /*
+            films_list.Add(new Film("Кино", "Научная фантастика", "Назад в Будущее", "https://imdb.com/title/tt0088763/", "https://kinopoisk.ru/film/476/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Драма", "Побег из Шоушенка", "https://imdb.com/title/tt0111161/", "https://kinopoisk.ru/film/326/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Научная фантастика", "Интерстеллар", "https://imdb.com/title/tt0816692/", "https://kinopoisk.ru/film/258687/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Драма", "Форрест Гамп", "https://imdb.com/title/tt0109830/", "https://kinopoisk.ru/film/448/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Научная фантастика", "Начало", "https://imdb.com/title/tt1375666/", "https://kinopoisk.ru/film/447301/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Комедия", "Один дома", "https://imdb.com/title/tt0099785/", "https://kinopoisk.ru/film/8124/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Драма", "Зелёная миля", "https://imdb.com/title/tt0120689/", "https://kinopoisk.ru/film/435/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Драма", "Престиж", "https://imdb.com/title/tt0120689/", "https://kinopoisk.ru/film/195334/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Драма, Комедия", "Поймай меня если сможешь", "https://imdb.com/title/tt0264464/", "https://kinopoisk.ru/324/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Драма, Детектив", "Остров проклятых", "https://imdb.com/title/tt1130884/", "https://kinopoisk.ru/film/397667/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Научная фантастика, Комедия", "Матрица", "https://imdb.com/title/tt0133093/", "https://kinopoisk.ru/film/301/", "2.28", "2.28"));
+            films_list.Add(new Film("Кино", "Драма, Триллер", "Бойцовский клуб", "https://imdb.com/title/tt0137523/", "https://kinopoisk.ru/film/361/", "2.28", "2.28"));
+            films_list.Add(new Film("Игры", "Шутер", "Half-life", "", "https://metacritic.com/game/pc/half-life", "2.28", ""));//
+            */
+
+            
             int x = 10;
             int y = 10;
             for (int i = 0; i < films_list.Count; i++)
@@ -323,6 +343,23 @@ namespace MoiProject
         {
             Form AddForm = new AddForm();
             AddForm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SignForm Form1 = new SignForm();
+            Form1.ShowDialog();
+
+            if (SignForm.Login == "Админ") 
+            {
+              SignForm.Password = "qwerty1234";
+          
+            };
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
