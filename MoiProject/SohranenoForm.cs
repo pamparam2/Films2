@@ -55,10 +55,9 @@ namespace MoiProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MailAddress from = new MailAddress("proverka456587@gmail.com", "Ilya");
+            MailAddress from = new MailAddress("interesno22815@gmail.com", "Ilya");
             // кому отправляем
-            MailAddress to = new MailAddress("beavisabra@yandex.ru");
-            // создаем объект сообщения
+            MailAddress to = new MailAddress("istrelov51@gmail.com");
             MailMessage m = new MailMessage(from, to);
             // тема письма
             m.Subject = "";
@@ -80,7 +79,7 @@ namespace MoiProject
             smtp.EnableSsl = true;
             smtp.Send(m);
 
-            MessageBox.Show("Отправлено");
+            MessageBox.Show("Успешно отправлено!");
         }
     }
 }
