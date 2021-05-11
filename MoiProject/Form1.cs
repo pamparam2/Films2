@@ -361,5 +361,11 @@ namespace MoiProject
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form MessageForm = new MessageForm();
+            MessageForm.Show();
+        }
     }
 }

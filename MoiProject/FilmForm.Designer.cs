@@ -62,7 +62,7 @@ namespace MoiProject
             this.label2.Location = new System.Drawing.Point(706, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 37);
+            this.label2.Size = new System.Drawing.Size(159, 46);
             this.label2.TabIndex = 10;
             this.label2.Text = "Начало";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -73,7 +73,7 @@ namespace MoiProject
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label1.Location = new System.Drawing.Point(18, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 29);
+            this.label1.Size = new System.Drawing.Size(157, 36);
             this.label1.TabIndex = 12;
             this.label1.Text = "Описание";
             // 
@@ -96,7 +96,7 @@ namespace MoiProject
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(634, 516);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(112, 24);
+            this.linkLabel1.Size = new System.Drawing.Size(147, 29);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Кинопоиск:";
@@ -107,7 +107,7 @@ namespace MoiProject
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(853, 516);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(57, 24);
+            this.linkLabel2.Size = new System.Drawing.Size(73, 29);
             this.linkLabel2.TabIndex = 15;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Imdb:";
@@ -118,14 +118,14 @@ namespace MoiProject
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(733, 476);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 24);
+            this.label3.Size = new System.Drawing.Size(109, 29);
             this.label3.TabIndex = 16;
             this.label3.Text = "Оценки:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 572);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 551);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 36);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +138,7 @@ namespace MoiProject
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(648, 551);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 24);
+            this.label4.Size = new System.Drawing.Size(71, 29);
             this.label4.TabIndex = 18;
             this.label4.Text = "1.337";
             // 
@@ -147,13 +147,13 @@ namespace MoiProject
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(853, 551);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 24);
+            this.label5.Size = new System.Drawing.Size(58, 29);
             this.label5.TabIndex = 19;
             this.label5.Text = "2.28";
             // 
             // FilmForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 670);
             this.Controls.Add(this.label5);

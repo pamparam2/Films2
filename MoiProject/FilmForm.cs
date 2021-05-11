@@ -76,6 +76,7 @@ namespace MoiProject
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Form1.sohraneno_list.Add(film);
+            MessageBox.Show("Успешно сохранено!");
         }
 
         private void FilmForm_Load(object sender, EventArgs e)
