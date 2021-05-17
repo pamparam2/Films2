@@ -1,13 +1,54 @@
-Кино; Научная фантастика; Назад в Будущее; https://imdb.com/title/tt0088763/; https://kinopoisk.ru/film/476/; 8,5; 8,6
-Кино; Драма; Побег из Шоушенка; https://imdb.com/title/tt0111161/; https://kinopoisk.ru/film/326/; 9,3; 9,1
-Кино; Научная фантастика; Интерстеллар; https://imdb.com/title/tt0816692/; https://kinopoisk.ru/film/258687/; 8,6; 8,6
-Кино; Драма; Форрест Гамп; https://imdb.com/title/tt0109830/; https://kinopoisk.ru/film/448/; 8,8; 8,9
-Кино; Научная фантастика; Начало; https://imdb.com/title/tt1375666/; https://kinopoisk.ru/film/447301/; 8,8; 8.7
-Кино; Комедия; Один дома; https://imdb.com/title/tt0099785/; https://kinopoisk.ru/film/8124/; 7,6; 8.2
-Кино; Драма; Зелёная миля; https://imdb.com/title/tt0120689/; https://kinopoisk.ru/film/435/; 8,6; 9.1
-Кино; Драма; Престиж; https://www.imdb.com/title/tt0482571/; https://kinopoisk.ru/film/195334/; 8,5; 8.5
-Кино; Драма, Комедия; Поймай меня если сможешь; https://imdb.com/title/tt0264464/; https://www.kinopoisk.ru/film/324/; 8,1; 8.5
-Кино; Драма, Детектив; Остров проклятых; https://imdb.com/title/tt1130884/; https://kinopoisk.ru/film/397667/; 8,2; 8.5
-Кино; Научная фантастика; Комедия; Матрица; https://imdb.com/title/tt0133093/; https://kinopoisk.ru/film/301/; 8,7; 8.5
-Кино; Драма, Триллер; Бойцовский клуб; https://imdb.com/title/tt0137523/; https://kinopoisk.ru/film/361/; 8,8; 8.6
-Игры; Шутер; Half-life; ; https://metacritic.com/game/pc/half-life; 9.1(Metacritic);  
+Кино; Фантастика, Комедия; Назад в Будущее; https://imdb.com/title/tt0088763/; https://kinopoisk.ru/film/476/; 8.5; 8,6
+Кино; Драма; Побег из Шоушенка; https://imdb.com/title/tt0111161/; https://kinopoisk.ru/film/326/; 9.3; 9,1
+Кино; Фантастика, Драма; Интерстеллар; https://imdb.com/title/tt0816692/; https://kinopoisk.ru/film/258687/; 8.6; 8,6
+Кино; Драма; Форрест Гамп; https://imdb.com/title/tt0109830/; https://kinopoisk.ru/film/448/; 8.8; 8,9
+Кино; Научная фантастика; Начало; https://imdb.com/title/tt1375666/; https://kinopoisk.ru/film/447301/; 8.8; 8.7
+Кино; Комедия; Один дома; https://imdb.com/title/tt0099785/; https://kinopoisk.ru/film/8124/; 7.6; 8.2
+Кино; Драма; Зелёная миля; https://imdb.com/title/tt0120689/; https://kinopoisk.ru/film/435/; 8.6; 9.1
+Кино; Драма, Фантастика; Престиж; https://www.imdb.com/title/tt0482571/; https://kinopoisk.ru/film/195334/; 8.5; 8.5
+Кино; Драма, Триллер, Комедия; Поймай меня если сможешь; https://imdb.com/title/tt0264464/; https://www.kinopoisk.ru/film/324/; 8.1; 8.5
+Кино; Драма, Детектив, Триллер; Остров проклятых; https://imdb.com/title/tt1130884/; https://kinopoisk.ru/film/397667/; 8.2; 8.5
+Кино; Научная фантастика; Матрица; https://imdb.com/title/tt0133093/; https://kinopoisk.ru/film/301/; 8.7; 8.5
+Кино; Драма, Триллер; Бойцовский клуб; https://imdb.com/title/tt0137523/; https://kinopoisk.ru/film/361/; 8.8; 8.6
+Кино; Драма,; 1 + 1; https://imdb.com/title/tt1675434/; https://kinopoisk.ru/film/535341/; 8.5; 8.8
+Кино; Мультфильм, Драма, Научная фантастика; ВАЛЛ·И; https://imdb.com/title/tt0910970/; https://kinopoisk.ru/film/279102/; 8.4; 8.3
+Кино; Комедия, Боевик; Большой куш; https://imdb.com/title/tt0208092/; https://kinopoisk.ru/film/526/; 8.3; 8.5
+Кино; Драма, Триллер, Боевик; Леон; https://imdb.com/title/tt0110413/; https://kinopoisk.ru/film/389/; 8.5; 8.7
+Кино; Фантастика, Боевик; Темный рыцарь; https://imdb.com/tt0468569/; https://kinopoisk.ru/film/111543/; 9.0; 8.5
+Кино; Вестерн, Криминал, Комедия; Джанго освобожденный; https://imdb.com/title/tt1853728/; https://kinopoisk.ru/film/586397/; 8.4; 8.2
+Кино; Драма; Игры разума; https://imdb.com/title/tt0268978/; https://kinopoisk.ru/film/530/; 8.2; 8.6
+Кино; Драма; Одержимость; https://imdb.com/title/tt2582802/; https://kinopoisk.ru/film/725190/; 8.5; 8.3
+Кино; Фантастика, Боевик; Терминатор 2 Судный день; https://imdb.com/title/tt0103064/; https://kinopoisk.ru/film/444/; 8.5; 8.3
+Кино; Драма; Гладиатор; https://imdb.com/title/tt0172495/; https://kinopoisk.ru/film/474/; 8.5; 8.6
+Кино; Фантастика, Приключения; Гарри Поттер и узник Азкабана; https://imdb.com/title/tt0304141/; https://kinopoisk.ru/film/322/; 7.9; 8.2
+Кино; Триллер, Драма, Криминал; Отступники; https://imdb.com/title/tt0407887/; https://kinopoisk.ru/film/81314/; 8.5; 8.5
+Кино; Боевик, Криминал; Брат 2; https://imdb.com/title/tt0238883/; https://kinopoisk.ru/film/41520/; 7.8; 8.1
+Кино; Драма, Криминал; Крестный отец; https://imdb.com/title/tt0068646/; https://kinopoisk.ru/film/325/; 9.2; 8.7
+Кино; Драма, Комедия; Шоу Трумана; https://imdb.com/title/tt0120382/; https://kinopoisk.ru/film/4541/; 8.1; 8.3
+Кино; Драма, Триллер ; Титаник; https://imdb.com/title/tt0120338/; https://kinopoisk.ru/film/2213/; 7.8; 8.4
+Сериалы; Детектив, Триллер, Драма, Криминал; Шерлок; https://imdb.com/title/tt1475582/; https://kinopoisk.ru/series/502838/; 9.1; 8.9
+Сериалы; Комедия, Мелодрама; Друзья; https://imdb.com/title/tt0108778/; https://kinopoisk.ru/series/77044/; 8.9; 9.2
+Сериалы; Комедия, Мелодрама; Теория большого взрыва; https://imdb.com/title/tt0898266/; https://kinopoisk.ru/series/306084/; 8.1; 8.6
+Сериалы; Комедия; Офис; https://imdb.com/title/tt0386676/; https://kinopoisk.ru/series/502838/; 8.9; 8.3
+Сериалы; Детектив, Триллер, Драма, Криминал; Во все тяжкие; https://imdb.com/title/tt0903747/; https://kinopoisk.ru/series/404900/; 9.4; 8.9
+Игры; Шутер; Half-life ; ; https://metacritic.com/game/pc/half-life; 9.1;  
+Игры; Шутер; Half-life 2 ; ; https://metacritic.com/game/pc/half-life-2;  9.2;  
+Игры; Шутер; Red Dead Redemption 2 ; ; https://metacritic.com/game/playstation-4/red-dead-redemption-2;  8.5;   
+Игры; Шутер; Grand Theft Auto V ; ; https://metacritic.com/game/playstation-4/grand-theft-auto-v;  8.4;  
+Игры; Шутер; Resident Evil 4 ; ; https://metacritic.com/game/gamecube/resident-evil-4;  9.2;
+Игры; Шутер; Portal 2 ; ; https://metacritic.com/game/game/pc/portal-2; 9.1; 
+Игры; Шутер; The Elder Scrolls V Skyrim ; ; https://metacritic.com/game/pc/the-elder-scrolls-v-skyrim; 8.3; 
+Игры; Шутер; BioShock Infinite ; ; https://metacritic.com/game/playstation-3/bioshock-infinite; 8.5;  
+Игры; Шутер; God of War ; ; https://metacritic.com/game/playstation-4/god-of-war;  9.2;
+Игры; Шутер; Devil May Cry ; ; https://metacritic.com/game/playstation-2/devil-may-cry;  8.6;   
+Игры; Шутер; Mass Effect 2 ; ; https://metacritic.com/game/pc/mass-effect-2;  8.9;   
+Игры; Шутер; Call of Duty Modern Warfare 2 ; ; https://metacritic.com/game/xbox-360/call-of-duty-modern-warfare-2;   6.5;  
+Игры; Шутер; The Witcher 3 Wild Hunt ; ; https://metacritic.com/game/pc/the-witcher-3-wild-hunt;   9.4;   
+Игры; Шутер; Resident Evil 2 ; ; https://metacritic.com/game/playstation-4/resident-evil-2;   8.9;   
+Игры; Шутер; Forza Horizon 4 ; ; https://metacritic.com/game/xbox-one/forza-horizon-4; ;  8.2;   
+Игры; Шутер; Dark Souls III ; ; https://metacritic.com/game/playstation-4/dark-souls-iii; 8.9;   
+Игры; Шутер; Assassin's Creed II ; https://metacritic.com/game/playstation-3/assassins-creed-ii; 8.7;  
+Игры; Шутер; Crysis ; ; https://metacritic.com/game/pc/crysis; 8.1; ;
+Игры; Шутер; Half-life Alyx; ; https://metacritic.com/game/pc/half-life-alyx; 9.2;    
+  
+

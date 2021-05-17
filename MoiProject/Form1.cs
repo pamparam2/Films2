@@ -289,26 +289,35 @@ namespace MoiProject
             else if (categoryCombo.Text == "Сериалы")
             {
                 genreCombo.Items.AddRange(new object[] {
-                    "Мыльные оперы",
-                    "Исторические",
-                    "Биографические",
-                    "Антологии",
-                    "Драматические",
-                    "Комедийные",
-                    "Приключенческие",
+                 "Комедийные",
                     "Фантастические",
-                });
+                    "Драматические",
+                    "Документальные фильмы",
+                    "Боевики",
+                    "Триллеры",
+                    "Хорроры",
+                    "Криминальные",
+                    "Мультфильм",
+                    "Приключения ",
+                    "Мюзиклы",
+                    "Мелодрамы",
+                    "Детективы"});
             }
             else if (categoryCombo.Text == "Кино")
             {
                 genreCombo.Items.AddRange(new object[] {
                     "Комедия",
-                    "Научная фантастика",
+                    "Фантастика",
                     "Драма",
                     "Документальный фильм",
                     "Боевик",
                     "Триллер",
                     "Хоррор",
+                    "Криминал",
+                    "Мультфильмы",
+                    "Приключение",
+                    "Вестерн",
+                    "Мюзикл",
                     "Детектив"});
             }
 
@@ -366,6 +375,11 @@ namespace MoiProject
         {
             Form MessageForm = new MessageForm();
             MessageForm.Show();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 }
