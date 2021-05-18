@@ -40,6 +40,7 @@ namespace MoiProject
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -47,10 +48,10 @@ namespace MoiProject
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(628, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(628, 105);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 393);
+            this.pictureBox1.Size = new System.Drawing.Size(324, 348);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -58,14 +59,14 @@ namespace MoiProject
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.label2.Location = new System.Drawing.Point(706, 9);
+            this.label2.Location = new System.Drawing.Point(628, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 37);
+            this.label2.Size = new System.Drawing.Size(324, 99);
             this.label2.TabIndex = 10;
             this.label2.Text = "Начало";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
@@ -74,7 +75,7 @@ namespace MoiProject
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label1.Location = new System.Drawing.Point(18, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 29);
+            this.label1.Size = new System.Drawing.Size(157, 36);
             this.label1.TabIndex = 12;
             this.label1.Text = "Описание";
             // 
@@ -97,7 +98,7 @@ namespace MoiProject
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(634, 516);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(112, 24);
+            this.linkLabel1.Size = new System.Drawing.Size(147, 29);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Кинопоиск:";
@@ -108,7 +109,7 @@ namespace MoiProject
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(853, 516);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(57, 24);
+            this.linkLabel2.Size = new System.Drawing.Size(73, 29);
             this.linkLabel2.TabIndex = 15;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Imdb:";
@@ -119,7 +120,7 @@ namespace MoiProject
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(733, 476);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 24);
+            this.label3.Size = new System.Drawing.Size(109, 29);
             this.label3.TabIndex = 16;
             this.label3.Text = "Оценки:";
             // 
@@ -139,7 +140,7 @@ namespace MoiProject
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(648, 551);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 24);
+            this.label4.Size = new System.Drawing.Size(71, 29);
             this.label4.TabIndex = 18;
             this.label4.Text = "1.337";
             // 
@@ -148,15 +149,26 @@ namespace MoiProject
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(853, 551);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 24);
+            this.label5.Size = new System.Drawing.Size(58, 29);
             this.label5.TabIndex = 19;
             this.label5.Text = "2.28";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label6.Location = new System.Drawing.Point(62, 561);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 17);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Добавить в избранное";
+            // 
             // FilmForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 670);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
@@ -190,5 +202,6 @@ namespace MoiProject
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

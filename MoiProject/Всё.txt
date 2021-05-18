@@ -31,7 +31,7 @@
 Сериалы; Комедия, Мелодрама; Теория большого взрыва; https://imdb.com/title/tt0898266/; https://kinopoisk.ru/series/306084/; 8.1; 8.6
 Сериалы; Комедия; Офис; https://imdb.com/title/tt0386676/; https://kinopoisk.ru/series/502838/; 8.9; 8.3
 Сериалы; Детектив, Триллер, Драма, Криминал; Во все тяжкие; https://imdb.com/title/tt0903747/; https://kinopoisk.ru/series/404900/; 9.4; 8.9
-Игры; Шутер; Half-life ; ; https://metacritic.com/game/pc/half-life; 9.1;  
+Игры; Шутер; Half-life; ; https://metacritic.com/game/pc/half-life; 9.1;  
 Игры; Шутер; Half-life 2 ; ; https://metacritic.com/game/pc/half-life-2;  9.2;  
 Игры; Шутер; Red Dead Redemption 2 ; ; https://metacritic.com/game/playstation-4/red-dead-redemption-2;  8.5;   
 Игры; Шутер; Grand Theft Auto V ; ; https://metacritic.com/game/playstation-4/grand-theft-auto-v;  8.4;  

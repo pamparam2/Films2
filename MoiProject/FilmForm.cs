@@ -31,7 +31,8 @@ namespace MoiProject
 
 
 
-            Text = name; 
+            Text = name;
+            
             foreach (Film film1 in Form1.films_list)
             {
                 if (film1.name == name)
@@ -41,6 +42,8 @@ namespace MoiProject
                     label5.Text = film1.ocenkaimdb;
                     label4.Text = film1.ocenkakinopoisk;
                     pictureBox1.Image = film1.picture.Image;
+                    
+
                     try
                     {
                         textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
@@ -95,7 +98,7 @@ namespace MoiProject
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -57,7 +57,7 @@ namespace MoiProject
             "Сериалы"});
             this.categoryCombo.Location = new System.Drawing.Point(156, 17);
             this.categoryCombo.Name = "categoryCombo";
-            this.categoryCombo.Size = new System.Drawing.Size(161, 30);
+            this.categoryCombo.Size = new System.Drawing.Size(161, 37);
             this.categoryCombo.TabIndex = 3;
             this.categoryCombo.Text = "Кино";
             this.categoryCombo.SelectedIndexChanged += new System.EventHandler(this.categoryCombo_SelectedIndexChanged);
@@ -79,7 +79,7 @@ namespace MoiProject
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.Size = new System.Drawing.Size(142, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Категория:";
             // 
@@ -87,7 +87,7 @@ namespace MoiProject
             // 
             this.textBox1.Location = new System.Drawing.Point(366, 20);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 28);
+            this.textBox1.Size = new System.Drawing.Size(262, 34);
             this.textBox1.TabIndex = 6;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -107,7 +107,7 @@ namespace MoiProject
             "Детектив"});
             this.genreCombo.Location = new System.Drawing.Point(156, 72);
             this.genreCombo.Name = "genreCombo";
-            this.genreCombo.Size = new System.Drawing.Size(161, 30);
+            this.genreCombo.Size = new System.Drawing.Size(161, 37);
             this.genreCombo.TabIndex = 19;
             this.genreCombo.SelectedIndexChanged += new System.EventHandler(this.Search);
             // 
@@ -116,7 +116,7 @@ namespace MoiProject
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(40, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 24);
+            this.label2.Size = new System.Drawing.Size(82, 29);
             this.label2.TabIndex = 20;
             this.label2.Text = "Жанр:";
             // 
@@ -126,7 +126,7 @@ namespace MoiProject
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(262, 37);
             this.button2.TabIndex = 21;
-            this.button2.Text = "Сохранённое";
+            this.button2.Text = "Избранное";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -178,7 +178,7 @@ namespace MoiProject
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(157, 45);
             this.button6.TabIndex = 25;
-            this.button6.Text = "Жалоба";
+            this.button6.Text = "Помощь";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -228,7 +228,7 @@ namespace MoiProject
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1191, 553);

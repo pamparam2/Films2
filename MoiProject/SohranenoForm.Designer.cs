@@ -34,9 +34,10 @@ namespace MoiProject
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(686, 13);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Location = new System.Drawing.Point(666, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 23);
+            this.button1.Size = new System.Drawing.Size(122, 47);
             this.button1.TabIndex = 0;
             this.button1.Text = "Отправить";
             this.button1.UseVisualStyleBackColor = true;

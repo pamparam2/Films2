@@ -23,15 +23,17 @@ namespace MoiProject
             {
                 //Название фильма
                 Label label = new Label();
-                label.Location = new Point(x + 50, y);
-                label.Size = new Size(220, 40);
+                label.Location = new Point(x + 60, y - 70);
+                label.Size = new Size(220, 60);
+                label.AutoSize = false;
+                label.TextAlign = ContentAlignment.MiddleCenter;
                 label.Text = film.name;
-                label.TextAlign = ContentAlignment.TopCenter;
+                label.Font = new Font("Arial", 11);
                 Controls.Add(label);
                 //Картинка
                 PictureBox picture = new PictureBox();
                 picture.Image = film.picture.Image;
-                picture.Location = new Point(x + 50, y );
+                picture.Location = new Point(x + 60, y );
                 picture.SizeMode = PictureBoxSizeMode.Zoom;
                 picture.Size = new Size(220, 260);
                 picture.Tag = film.name;
@@ -41,7 +43,7 @@ namespace MoiProject
                 x = x + 230;
                 if (x + 220 > Width)
                 {
-                    y = y + 300;
+                    y = y + 340;
                     x = 10;
                 }
 

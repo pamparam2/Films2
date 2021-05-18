@@ -49,8 +49,14 @@ namespace MoiProject
         {
             label1.Text = words["Категория"] + ":";
             label2.Text = words["Жанр"];
-            button2.Text = words["Сохранённое"];
+            button2.Text = words["Избранное"];
             button1.Text = words["Найти"];
+            button4.Text = words["Добавить"];
+            button5.Text = words["Войти"];
+            button6.Text = words["Помощь"]; 
+
+
+
         }
 
         private void EngButton_Click(object sender, EventArgs e)
@@ -71,17 +77,24 @@ namespace MoiProject
             EngWords.Add("Категория", "Category");
             EngWords.Add("Жанр", "Genre");
             EngWords.Add("Найти", "Search");
-            EngWords.Add("Сохранённое", "Basket");
+            EngWords.Add("Избранное", "Basket");
             EngWords.Add("Описание", "Description");
             EngWords.Add("Оценки:", "Ratings:");
+            EngWords.Add("Добавить", "Add");
+            EngWords.Add("Помощь", "Support");
+            EngWords.Add("Войти", "Sign");
+
 
 
             RusWords.Add("Категория", "Категория");
             RusWords.Add("Жанр", "Жанр");
             RusWords.Add("Найти", "Найти");
-            RusWords.Add("Сохранённое", "Сохранённое");
+            RusWords.Add("Избранное", "Избранное");
             RusWords.Add("Описание", "Описание");
             RusWords.Add("Оценки:", "Оценки:");
+            RusWords.Add("Добавить", "Добавить");
+            RusWords.Add("Помощь", "Помощь");
+            RusWords.Add("Войти", "Войти");
 
             string[] lines = File.ReadAllLines("../../Всё.txt");
             foreach (string line in lines)
@@ -119,32 +132,34 @@ namespace MoiProject
             {
                 //Название фильма
                 films_list[i].label.Location = new Point(x, y);
-                films_list[i].label.Size = new Size(220, 40);
+                films_list[i].label.Size = new Size(220, 60);
+                films_list[i].label.AutoSize = false;
+                films_list[i].label.TextAlign = ContentAlignment.BottomCenter;
                 films_list[i].label.Text = films_list[i].name;
                 films_list[i].label.TextAlign = ContentAlignment.TopCenter;
                 filmsPanel.Controls.Add(films_list[i].label);
 
                 //Картинка
-                films_list[i].picture.Location = new Point(x, y + 15);
+                films_list[i].picture.Location = new Point(x, y + 60);
                 films_list[i].picture.SizeMode = PictureBoxSizeMode.Zoom;
                 films_list[i].picture.Size = new Size(220, 260);
                 films_list[i].picture.Tag = films_list[i].name;
                 films_list[i].picture.Click += new EventHandler(OpenFilm);
                 try
                 {
-                    films_list[i].picture.Load("../../Pictures/" + films_list[i].name + ".jpg");
+                    films_list[i].picture.Load("../../Pictures/" + films_list[i].name.Trim() + ".jpg");
                 }
                 catch (Exception)
                 {
                     try
                     {
-                        films_list[i].picture.Load("../../Pictures/" + films_list[i].name + ".jpeg");
+                        films_list[i].picture.Load("../../Pictures/" + films_list[i].name.Trim() + ".jpeg");
                     }
                     catch (Exception)
                     {
                         try
                         {
-                            films_list[i].picture.Load("../../Pictures/" + films_list[i].name + ".jfif");
+                            films_list[i].picture.Load("../../Pictures/" + films_list[i].name.Trim() + ".jfif");
                         }
                         catch (Exception) { }
                     }
@@ -155,7 +170,7 @@ namespace MoiProject
                 x = x + 230;
                 if (x + 220 > Width)
                 {
-                    y = y + 300;
+                    y = y + 340;
                     x = 10;
                 }
             }
@@ -214,7 +229,7 @@ namespace MoiProject
                     x = x + 230;
                     if (x + 220 > Width)
                     {
-                        y = y + 300;
+                        y = y + 340;
                         x = 10;
                     }
 
