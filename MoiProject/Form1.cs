@@ -134,9 +134,8 @@ namespace MoiProject
                 films_list[i].label.Location = new Point(x, y);
                 films_list[i].label.Size = new Size(220, 60);
                 films_list[i].label.AutoSize = false;
-                films_list[i].label.TextAlign = ContentAlignment.BottomCenter;
+                films_list[i].label.TextAlign = ContentAlignment.MiddleCenter;
                 films_list[i].label.Text = films_list[i].name;
-                films_list[i].label.TextAlign = ContentAlignment.TopCenter;
                 filmsPanel.Controls.Add(films_list[i].label);
 
                 //Картинка
@@ -144,6 +143,7 @@ namespace MoiProject
                 films_list[i].picture.SizeMode = PictureBoxSizeMode.Zoom;
                 films_list[i].picture.Size = new Size(220, 260);
                 films_list[i].picture.Tag = films_list[i].name;
+                films_list[i].picture.SizeMode = PictureBoxSizeMode.Zoom;
                 films_list[i].picture.Click += new EventHandler(OpenFilm);
                 try
                 {
@@ -224,7 +224,7 @@ namespace MoiProject
                 {
 
                     films_list[i].label.Location = new Point(x, y);
-                    films_list[i].picture.Location = new Point(x, y + 20);
+                    films_list[i].picture.Location = new Point(x, y + 60);
 
                     x = x + 230;
                     if (x + 220 > Width)

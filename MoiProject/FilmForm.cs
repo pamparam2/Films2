@@ -46,7 +46,7 @@ namespace MoiProject
 
                     try
                     {
-                        textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
+                        textBox1.Text = File.ReadAllText("../../Pictures/" + name.Trim() + ".txt");
                     }
                     catch (Exception) { }
 

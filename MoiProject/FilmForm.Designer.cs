@@ -59,7 +59,7 @@ namespace MoiProject
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.label2.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(628, 1);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
@@ -72,10 +72,10 @@ namespace MoiProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(18, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 36);
+            this.label1.Size = new System.Drawing.Size(115, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "Описание";
             // 
@@ -83,7 +83,8 @@ namespace MoiProject
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox1.Font = new System.Drawing.Font("Cambria", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox1.Location = new System.Drawing.Point(24, 48);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -98,7 +99,7 @@ namespace MoiProject
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(634, 516);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(147, 29);
+            this.linkLabel1.Size = new System.Drawing.Size(112, 24);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Кинопоиск:";
@@ -109,7 +110,7 @@ namespace MoiProject
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(853, 516);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(73, 29);
+            this.linkLabel2.Size = new System.Drawing.Size(57, 24);
             this.linkLabel2.TabIndex = 15;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Imdb:";
@@ -118,9 +119,10 @@ namespace MoiProject
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(733, 476);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 29);
+            this.label3.Size = new System.Drawing.Size(79, 23);
             this.label3.TabIndex = 16;
             this.label3.Text = "Оценки:";
             // 
@@ -140,7 +142,7 @@ namespace MoiProject
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(648, 551);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 29);
+            this.label4.Size = new System.Drawing.Size(55, 24);
             this.label4.TabIndex = 18;
             this.label4.Text = "1.337";
             // 
@@ -149,25 +151,25 @@ namespace MoiProject
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(853, 551);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 29);
+            this.label5.Size = new System.Drawing.Size(45, 24);
             this.label5.TabIndex = 19;
             this.label5.Text = "2.28";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label6.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(62, 561);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 17);
+            this.label6.Size = new System.Drawing.Size(151, 18);
             this.label6.TabIndex = 20;
             this.label6.Text = "Добавить в избранное";
             // 
             // FilmForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 670);
+            this.ClientSize = new System.Drawing.Size(984, 609);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
