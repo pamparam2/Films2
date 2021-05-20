@@ -59,7 +59,7 @@ namespace MoiProject
         {
             MailAddress from = new MailAddress("interesno22815@gmail.com", "Ilya");
             // кому отправляем
-            MailAddress to = new MailAddress("istrelov51@gmail.com");
+            MailAddress to = new MailAddress(textBox1.Text);
             MailMessage m = new MailMessage(from, to);
             // тема письма
             m.Subject = "";
